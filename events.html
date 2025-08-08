@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Little Flower Preschool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .events-section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        .event-card {
+            background: #fffafc;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid #ffd3e1;
+            transition: transform 0.2s ease;
+        }
+        .event-card:hover {
+            transform: scale(1.02);
+        }
+        .event-card img {
+            width: 150px;
+            height: 100px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        .event-details h3 {
+            margin: 0;
+            color: #ff3e7d;
+        }
+        .event-details p {
+            margin: 5px 0;
+        }
+        .event-details a {
+            text-decoration: none;
+            color: #00aeef;
+            font-weight: bold;
+        }
+        .section-title {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.jpg" alt="Little Flower Preschool Logo" class="logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programmes.html">Our Programmes</a></li>
+                <li><a href="unique.html">Unique Features</a></li>
+                <li><a href="founders.html">Meet the Founders</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="parents.html">Parent's Corner</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Events & Celebrations</h1>
+        <p>Special moments that bring our community together</p>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="events-section">
+        <h2 class="section-title">Upcoming Events</h2>
+
+        <div class="event-card">
+            <img src="sports-day.jpg" alt="Sports Day">
+            <div class="event-details">
+                <h3>Annual Sports Day</h3>
+                <p><strong>Date:</strong> March 10, 2025</p>
+                <p>Join us for a fun-filled day of games, races, and team spirit!</p>
+                <a href="event1.html">Read More →</a>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="holi-celebration.jpg" alt="Holi Celebration">
+            <div class="event-details">
+                <h3>Holi Celebration</h3>
+                <p><strong>Date:</strong> March 25, 2025</p>
+                <p>Colors, joy, and laughter — let's celebrate Holi the preschool way!</p>
+                <a href="event2.html">Read More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Events -->
+    <section class="events-section">
+        <h2 class="section-title">Past Highlights</h2>
+
+        <div class="event-card">
+            <img src="annual-day.jpg" alt="Annual Day">
+            <div class="event-details">
+                <h3>Annual Day 2024</h3>
+                <p>Our students dazzled the stage with songs, dances, and drama performances.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="diwali.jpg" alt="Diwali Celebration">
+            <div class="event-details">
+                <h3>Diwali Celebration</h3>
+                <p>Lighting diyas, making rangolis, and sharing sweets brought our community closer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Little Flower Preschool, Silvassa | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

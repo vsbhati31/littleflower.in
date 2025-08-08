@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Little Flower Preschool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .admission-steps {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .admission-steps ol {
+            padding-left: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #ff6f9f;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #ff3e7d;
+        }
+        form {
+            max-width: 600px;
+            margin: 30px auto;
+            background: #fdf3f8;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background: #00aeef;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        form button:hover {
+            background: #008ec2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.jpg" alt="Little Flower Preschool Logo" class="logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programmes.html">Our Programmes</a></li>
+                <li><a href="unique.html">Unique Features</a></li>
+                <li><a href="founders.html">Meet the Founders</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admissions.html" class="active">Admissions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="parents.html">Parent's Corner</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Admissions</h1>
+        <p>Join our family and watch your child blossom</p>
+    </section>
+
+    <!-- Admission Steps -->
+    <section class="admission-steps">
+        <h2>How to Apply</h2>
+        <ol>
+            <li>Visit our campus for a guided tour and meet our team.</li>
+            <li>Collect or download the admission form.</li>
+            <li>Fill out the form and submit it with required documents.</li>
+            <li>Attend an orientation session with your child.</li>
+            <li>Welcome to Little Flower Preschool!</li>
+        </ol>
+        <a href="admission-form.pdf" class="cta-button" download>📄 Download Admission Form</a>
+    </section>
+
+    <!-- Inquiry Form -->
+    <section>
+        <h2 style="text-align:center; margin-top:30px;">Admission Inquiry</h2>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Parent's Name" required>
+            <input type="text" name="child-name" placeholder="Child's Name" required>
+            <input type="number" name="age" placeholder="Child's Age" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <textarea name="message" rows="4" placeholder="Additional Details"></textarea>
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Little Flower Preschool, Silvassa | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

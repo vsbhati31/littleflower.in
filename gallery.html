@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Little Flower Preschool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <style>
+        /* Lightbox basic styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .lightbox img {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.jpg" alt="Little Flower Preschool Logo" class="logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programmes.html">Our Programmes</a></li>
+                <li><a href="unique.html">Unique Features</a></li>
+                <li><a href="founders.html">Meet the Founders</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="parents.html">Parent's Corner</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Our Gallery</h1>
+        <p>Capturing joyful moments of learning, playing, and growing</p>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+        <img src="gallery1.jpg" alt="Kids in classroom" onclick="openLightbox(this.src)">
+        <img src="gallery2.jpg" alt="Outdoor play" onclick="openLightbox(this.src)">
+        <img src="gallery3.jpg" alt="Art and craft session" onclick="openLightbox(this.src)">
+        <img src="gallery4.jpg" alt="Music and dance" onclick="openLightbox(this.src)">
+        <img src="gallery5.jpg" alt="Annual day event" onclick="openLightbox(this.src)">
+        <img src="gallery6.jpg" alt="Story time" onclick="openLightbox(this.src)">
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Little Flower Preschool, Silvassa | All Rights Reserved</p>
+    </footer>
+
+    <!-- Lightbox Script -->
+    <script>
+        function openLightbox(src) {
+            document.getElementById("lightbox").style.display = "block";
+            document.getElementById("lightbox-img").src = src;
+        }
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+</body>
+</html>
