@@ -155,5 +155,13 @@ footer {
     header {
         flex-direction: column;
         align-items: flex-start;
+       /* Restrict logo size across all pages */
+.logo img {
+    max-width: 180px;   /* adjust as needed */
+    height: auto;
+    display: block;
+}
+
     }
 }
+
