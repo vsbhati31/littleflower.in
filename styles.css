@@ -155,13 +155,21 @@ footer {
     header {
         flex-direction: column;
         align-items: flex-start;
-       /* Restrict logo size across all pages */
+/* ------------------------------
+   Logo Size Control
+------------------------------ */
 .logo img {
-    max-width: 180px;   /* adjust as needed */
+    max-width: 180px; /* desktop size */
     height: auto;
     display: block;
 }
 
+/* Responsive logo size for smaller screens */
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 140px; /* mobile size */
     }
 }
 
+    }
+}
