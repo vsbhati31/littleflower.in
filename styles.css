@@ -1,26 +1,9 @@
-/* styles.css - Little Flower Preschool (Adorable, Colorful, Space-Optimized, Professional) */
+/* styles.css - Little Flower Preschool (No unwanted left margin, balanced navigation, adorable and professional) */
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Quicksand:wght@400;600&display=swap');
 
-:root {
-  --color-pink: #ff3e7d;
-  --color-purple: #a46cff;
-  --color-yellow: #ffe47a;
-  --color-green: #7dd87d;
-  --color-blue: #3ec6ff;
-  --color-bg: #fff8fb;
-  --color-card: #ffe6f1;
-  --color-white: #fff;
-  --color-accent: #fff3f7;
-  --color-text: #333;
-  --color-footer: #fbeff8;
-  --radius: 16px;
-  --shadow: 0 4px 16px rgba(255,62,125,0.12);
-  --transition: 0.18s cubic-bezier(.5,1.5,.5,1);
-}
-
-/* Reset */
+/* CSS Reset and Box Model */
 * {
   margin: 0;
   padding: 0;
@@ -28,60 +11,74 @@
 }
 
 html, body {
+  width: 100%;
+  min-height: 100%;
   font-family: 'Quicksand', 'Baloo 2', cursive, sans-serif;
-  background: var(--color-bg);
-  color: var(--color-text);
-  min-height: 100vh;
+  background: #fff8fb;
+  color: #333;
   font-size: 17px;
   scroll-behavior: smooth;
 }
 
+/* HEADER & NAVIGATION */
 header {
+  width: 100%;
   background: linear-gradient(90deg, #ffe6f1 0%, #e1e6ff 100%);
-  box-shadow: var(--shadow);
-  border-radius: 0 0 var(--radius) var(--radius);
-  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(255,62,125,0.03);
+  border-radius: 0 0 16px 16px;
   padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  padding: 13px 0 8px 24px;
+  padding: 13px 0 8px 0; /* Removed left padding for no unwanted margin */
+  margin-left: 24px; /* Give a little breathing space from the left edge */
 }
+
 .logo {
-  height: 62px;
+  height: 56px;
+  width: auto;
   border-radius: 10px;
+  background: #fff;
   box-shadow: 0 2px 8px rgba(255,62,125,0.14);
-  background: var(--color-white);
-  transition: transform var(--transition);
+  transition: transform 0.2s;
 }
-.logo:hover { transform: scale(1.06) rotate(-3deg); }
+.logo:hover { transform: scale(1.06) rotate(-2deg); }
 
 nav {
   width: 100%;
   background: none;
+  margin: 0;
+  padding: 0;
 }
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   gap: 0;
-  justify-content: flex-end;
+  justify-content: flex-start; /* Align all tab links to the left */
   background: none;
-  padding: 0 16px 0 0;
+  padding: 0 0 0 24px; /* Balanced left padding for tabs */
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
   display: block;
-  padding: 14px 22px 12px 22px;
+  padding: 16px 18px 12px 18px;
   text-decoration: none;
   font-weight: 600;
   font-family: 'Baloo 2', cursive;
-  color: var(--color-pink);
+  color: #ff3e7d;
   border-radius: 0 0 14px 14px;
-  font-size: 1.09em;
-  transition: background var(--transition), color var(--transition);
+  font-size: 1.08em;
+  transition: background 0.15s, color 0.15s;
   border-bottom: 3px solid transparent;
   background: none;
   letter-spacing: 0.5px;
@@ -90,164 +87,152 @@ nav ul li a {
 }
 nav ul li a.active,
 nav ul li a:hover {
-  background: linear-gradient(90deg, var(--color-pink) 70%, var(--color-purple) 100%);
-  color: var(--color-white);
-  border-bottom: 3px solid var(--color-pink);
+  background: linear-gradient(90deg, #ff3e7d 80%, #a46cff 100%);
+  color: #fff;
+  border-bottom: 3px solid #ff3e7d;
 }
 
+/* PAGE HEADER */
 .page-header {
   background: linear-gradient(90deg, #fff3f7 0%, #e1e6ff 100%);
-  padding: 44px 8vw 30px 8vw;
+  padding: 38px 18px 28px 18px;
   text-align: center;
-  border-radius: 0 0 var(--radius) var(--radius);
-  margin-bottom: 30px;
-  box-shadow: 0 2px 18px #ffe47a33;
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 26px;
+  box-shadow: 0 1px 10px #ffe47a33;
 }
 .page-header h1 {
   font-family: 'Baloo 2', cursive;
-  font-size: 2.5em;
-  color: var(--color-pink);
-  letter-spacing: 1.5px;
-  margin-bottom: 8px;
+  font-size: 2.15em;
+  color: #ff3e7d;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
 }
 .page-header p {
-  font-size: 1.19em;
+  font-size: 1.14em;
   color: #6d4b63;
 }
 
+/* MAIN CONTENT SECTIONS */
 section {
-  margin-bottom: 38px;
+  margin-bottom: 30px;
 }
 
 .about-section, .content, .unique-section, .founders-section, .parents-section, .admissions-section, .programmes-section {
-  max-width: 920px;
-  margin: 0 auto 0 auto;
-  padding: 0 5vw;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
-
 .about-section .content, .unique-section, .parents-section, .admissions-section, .programmes-section {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
-
 .about-section h2,
 .unique-title,
 .founders-title,
 .parents-title,
 .admissions-title,
 .prog-title {
-  color: var(--color-purple);
+  color: #a46cff;
   font-family: 'Baloo 2', cursive;
   margin-bottom: 10px;
   margin-top: 0;
-  font-size: 1.6em;
+  font-size: 1.44em;
 }
 
+/* LISTS */
 ul, ol {
-  padding-left: 1.2em;
-  margin: 12px 0 0 0;
+  padding-left: 1.3em;
+  margin: 10px 0 0 0;
 }
-
 li {
-  margin: 9px 0;
-  font-size: 1.08em;
+  margin: 8px 0;
+  font-size: 1.06em;
   line-height: 1.6;
 }
-
-.values-list, .flower-list, .unique-list, .tip-list, .steps-list, .programme-list {
-  list-style: none;
-  margin: 0 0 0 0;
-  padding: 0;
+.values-list li::before, .unique-list li::before, .tip-list li::before, .steps-list li::before {
+  font-size: 1.1em;
+  margin-right: 7px;
 }
-.values-list li, .flower-list li, .unique-list li, .tip-list li, .steps-list li, .programme-list li {
-  background: linear-gradient(90deg, #ffe6f1 30%, #e1e6ff 100%);
-  border-radius: var(--radius);
-  padding: 15px 22px;
-  margin-bottom: 13px;
+.values-list li::before { content: "🌸"; }
+.unique-list li::before { content: "🌷"; }
+.tip-list li::before { content: "💡"; }
+.steps-list li::before { content: "📝"; }
+
+/* CARDS AND GALLERY */
+.contact-card, .event-card, .founder-card, .gallery-grid img, .gallery img {
+  border-radius: 14px;
   box-shadow: 0 2px 8px #ff3e7d17;
-  font-size: 1.06em;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: box-shadow .18s;
 }
-.values-list li::before { content: "🌸 "; }
-.flower-list li::before { content: "🌼 "; }
-.unique-list li::before { content: "🌷 "; }
-.tip-list li::before { content: "💡 "; }
-.steps-list li::before { content: "📝 "; }
-
-.flower-list li strong, .programme-list li strong {
-  color: var(--color-pink);
-  font-weight: 700;
-}
-
 .gallery, .gallery-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
-  justify-content: center;
+  justify-content: flex-start; /* Align gallery items to left */
   margin-top: 14px;
+  padding-left: 24px;
 }
 .gallery img, .gallery-grid img {
-  width: 215px;
-  height: 145px;
+  width: 210px;
+  height: 140px;
   object-fit: cover;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 12px #ff3e7d1a;
-  transition: transform var(--transition), box-shadow var(--transition);
-  background: var(--color-card);
+  margin-bottom: 7px;
+  background: #ffe6f1;
   border: 3px solid #ffe6f1;
+  transition: transform 0.18s, box-shadow 0.18s;
 }
 .gallery img:hover, .gallery-grid img:hover {
-  transform: scale(1.045) rotate(-2deg);
+  transform: scale(1.04) rotate(-2deg);
   box-shadow: 0 8px 32px #a46cff29;
-  border-color: var(--color-pink);
+  border-color: #ff3e7d;
 }
 
+/* SECTION IMAGES */
+.section-img {
+  display: block;
+  margin: 0 auto 18px auto;
+  max-width: 320px;
+  width: 90%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px #ff3e7d22;
+}
+
+/* BUTTONS */
 .btn, .quick-buttons a, .admission-contact a {
   display: inline-block;
-  background: linear-gradient(90deg, var(--color-pink) 60%, var(--color-blue) 100%);
-  color: var(--color-white);
-  padding: 12px 36px;
-  border-radius: 30px;
-  font-size: 1.13em;
+  background: linear-gradient(90deg, #ff3e7d 60%, #3ec6ff 100%);
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 26px;
+  font-size: 1.11em;
   font-weight: 700;
   text-decoration: none;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 8px #a46cff21;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 7px #a46cff21;
   border: none;
-  transition: background var(--transition), transform var(--transition);
+  transition: background 0.17s, transform 0.13s;
 }
 .btn:hover, .quick-buttons a:hover, .admission-contact a:hover {
-  background: linear-gradient(90deg, var(--color-purple) 60%, var(--color-pink) 100%);
+  background: linear-gradient(90deg, #a46cff 70%, #ff3e7d 100%);
   transform: scale(1.04);
-  color: var(--color-yellow);
+  color: #ffe47a;
 }
 
-.cta {
-  text-align: center;
-  background: linear-gradient(90deg, #ffe6f1 40%, #e1e6ff 100%);
-  padding: 38px 10px;
-  border-radius: var(--radius);
-  margin: 40px auto 20px auto;
-  max-width: 700px;
-  box-shadow: var(--shadow);
-}
-
+/* FOOTER */
 footer {
-  background: var(--color-footer);
+  background: #fbeff8;
   color: #b875aa;
   text-align: center;
-  padding: 22px 8px 18px 8px;
+  padding: 20px 8px 16px 8px;
   font-size: 1em;
   border-top: 2px solid #ffe6f1;
-  margin-top: 40px;
-  border-radius: var(--radius) var(--radius) 0 0;
-  letter-spacing: 1.2px;
+  margin-top: 36px;
+  border-radius: 16px 16px 0 0;
+  letter-spacing: 1.1px;
 }
 
-/* Responsive Design */
+/* RESPONSIVE DESIGN */
 @media (max-width: 1000px) {
   .about-section, .content, .unique-section, .founders-section, .parents-section, .admissions-section, .programmes-section {
     max-width: 98vw;
@@ -260,16 +245,20 @@ footer {
     max-height: 200px;
   }
 }
+
 @media (max-width: 700px) {
+  .logo-container {
+    margin-left: 9px; /* Smaller left margin on mobile */
+  }
   nav ul {
     flex-direction: column;
     gap: 0;
-    align-items: stretch;
-    padding: 0;
+    align-items: flex-start;
+    padding: 0 0 0 9px;
   }
   nav ul li a {
-    padding: 11px 14px 9px 24px;
-    font-size: 1.05em;
+    padding: 12px 15px 10px 20px;
+    font-size: 1em;
     border-radius: 0;
     border-bottom: 1px solid #ffe6f1;
   }
@@ -280,7 +269,7 @@ footer {
     max-height: 170px;
   }
   .page-header {
-    padding: 24px 3vw 14px 3vw;
+    padding: 22px 3vw 12px 3vw;
     border-radius: 0 0 10px 10px;
   }
   .cta {
@@ -289,7 +278,7 @@ footer {
   }
 }
 
-/* Scrollbar Styling */
+/* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 10px;
   background: #ffe6f1;
@@ -299,57 +288,13 @@ footer {
   border-radius: 8px;
 }
 
-/* Links */
+/* LINKS */
 a {
-  color: var(--color-pink);
+  color: #ff3e7d;
   text-decoration: none;
-  transition: color 0.15s;
+  transition: color 0.14s;
 }
 a:hover {
-  color: var(--color-purple);
+  color: #a46cff;
   text-decoration: underline;
-}
-
-/* Card Styles for sections (contact/events/others) */
-.contact-card, .event-card, .founder-card {
-  background: linear-gradient(120deg, #ffe6f1 65%, #e1e6ff 100%);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 18px 16px;
-  margin: 9px 0;
-}
-
-/* Subtle Animations */
-@keyframes floatFlower {
-  0% { transform: translateY(0) rotate(-2deg);}
-  50% { transform: translateY(-7px) rotate(2deg);}
-  100% { transform: translateY(0) rotate(-2deg);}
-}
-.logo { animation: floatFlower 4s ease-in-out infinite; }
-.gallery img, .gallery-grid img { animation: floatFlower 8s ease-in-out infinite; animation-delay: 0.5s; }
-
-/* Utility */
-.text-center { text-align: center; }
-.mt-2 { margin-top: 2rem; }
-.mb-2 { margin-bottom: 2rem; }
-
-/* Lightbox (gallery.html) */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0; top: 0; width: 100vw; height: 100vh;
-  background: rgba(58,24,39,0.86);
-  justify-content: center; align-items: center;
-}
-.lightbox img {
-  max-width: 93vw;
-  max-height: 82vh;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 32px #fff3f7cc;
-}
-.close {
-  position: absolute; top: 22px; right: 34px;
-  color: #fff; font-size: 48px; font-weight: bold;
-  cursor: pointer;
 }
