@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Little Flower Preschool</title>
+    <title>Contact Us - Little Flower Preschool</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .contact-wrapper {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .contact-card {
+            background: #fff3f7;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        .contact-card h3 {
+            color: #ff3e7d;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .contact-card p {
+            margin: 5px 0;
+            font-size: 1.05rem;
+        }
+        .contact-card a {
+            color: #ff3e7d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+        .quick-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .quick-buttons a {
+            background-color: #ff3e7d;
+            color: white;
+            padding: 10px 20px;
+            margin: 8px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .quick-buttons a:hover {
+            background-color: #ff6899;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -18,7 +78,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="programmes.html">Our Programmes</a></li>
                 <li><a href="unique.html">Unique Features</a></li>
                 <li><a href="founders.html">Meet the Founders</a></li>
@@ -26,21 +86,56 @@
                 <li><a href="admissions.html">Admissions</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="parents.html">Parent's Corner</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Page Header -->
-    <section class="page-header" style="background: linear-gradient(to right, #ffd3e1, #fff3f7); text-align:center; padding: 30px 10px;">
-        <h1 style="font-size: 2.2rem; margin: 0;">About Us</h1>
-        <p>Our story, our philosophy, and our values</p>
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you — reach out anytime!</p>
     </section>
 
-    <!-- About Content -->
-    <section style="max-width: 900px; margin: auto; padding: 20px;">
-        <h2 style="color: #ff3e7d;">Our Story</h2>
-        <p>Little Flower Preschool was founded by four passionate educators — <strong>Sonali Deshmukh</strong>, <strong>Khushboo Hisaria</strong>, <strong>Deepika Rathore</strong>, and <strong>Devika Das</strong> — with a shared vision to provide a safe, loving, and academically strong foundation for children in Silvassa. Our founder-led approach ensures that each child receives personal attention and care.</p>
+    <!-- Contact Information -->
+    <section class="contact-wrapper">
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Our Address</h3>
+                <p>Shop No 11, Pramukh Sangam, Samarvani, Silvassa, Dadra Nagar Haveli & Daman</p>
+            </div>
+            <div class="contact-card">
+                <h3>Call Us</h3>
+                <p><a href="tel:+919429791512">94297 91512</a></p>
+                <p><a href="tel:+917600980604">76009 80604</a></p>
+                <p><a href="tel:+918488022081">84880 22081</a></p>
+                <p><a href="tel:+919106438850">91064 38850</a></p>
+            </div>
+            <div class="contact-card">
+                <h3>Email Us</h3>
+                <p><a href="mailto:littelflowerpreschool25@gmail.com">littelflowerpreschool25@gmail.com</a></p>
+            </div>
+        </div>
 
-        <h2 style="color: #ff3e7d;">Our Philosophy</h2>
-        <p>We believe in learning through play, where curiosity and creativity drive education. By blending th
+        <!-- Google Map -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps?q=Shop%20No%2011%2C%20Pramukh%20Sangam%2C%20Samarvani%2C%20Silvassa%2C%20Dadra%20Nagar%20Haveli%20and%20Daman&output=embed" 
+                width="100%" 
+                height="350">
+            </iframe>
+        </div>
+
+        <!-- Quick Buttons -->
+        <div class="quick-buttons">
+            <a href="tel:+919429791512">📞 Call Now</a>
+            <a href="mailto:littelflowerpreschool25@gmail.com">✉ Email Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Little Flower Preschool, Silvassa | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
