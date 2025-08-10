@@ -1,3 +1,4 @@
+<!-- unique.html - Little Flower Preschool (logo issue fixed) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +7,45 @@
     <title>Unique Features - Little Flower Preschool</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .unique-section {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 18px;
+        }
+        .unique-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .unique-list li {
+            background: #fff3f7;
+            border-radius: 10px;
+            margin: 12px 0;
+            padding: 18px 24px;
+            font-size: 1.13rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 1px 5px rgba(255, 62, 125, 0.08);
+        }
+        .unique-list li::before {
+            content: "🌸";
+            font-size: 1.3em;
+        }
+        .unique-title {
+            color: #ff3e7d;
+            margin-bottom: 18px;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo-container">
-            <a href="index.html"><img src="logo.jpg" alt="Little Flower Preschool Logo" class="logo"></a>
+            <a href="index.html"><img src="LOGO_page-0001.jpg" alt="Little Flower Preschool Logo" class="logo"></a>
         </div>
         <nav>
             <ul>
@@ -32,31 +66,23 @@
     <!-- Page Header -->
     <section class="page-header">
         <h1>Our Unique Features</h1>
-        <p>Why parents choose Little Flower Preschool</p>
+        <p>What makes Little Flower Preschool special?</p>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-grid">
-        <div class="feature-card">
-            <img src="founder-led.jpg" alt="Founder-led Approach">
-            <h2>Founder-led Approach</h2>
-            <p>Run by four highly experienced educators who are actively involved in the day-to-day learning experience, ensuring personal care for every child.</p>
-        </div>
-        <div class="feature-card">
-            <img src="safety.jpg" alt="Safety & Security">
-            <h2>Safety & Security</h2>
-            <p>Full CCTV surveillance, secure entry points, trained staff, and strict safety protocols for complete peace of mind.</p>
-        </div>
-        <div class="feature-card">
-            <img src="community-events.jpg" alt="Community Events">
-            <h2>Community & Events</h2>
-            <p>A vibrant community celebrating festivals, sports, and cultural events, fostering togetherness and joy in learning.</p>
-        </div>
-        <div class="feature-card">
-            <img src="play-based-learning.jpg" alt="Play-Based Learning">
-            <h2>Play-Based Learning</h2>
-            <p>Our CBSE-aligned curriculum blends academics with hands-on, play-based activities to inspire curiosity and creativity.</p>
-        </div>
+    <section class="unique-section">
+        <h2 class="unique-title">Why Families Love Us</h2>
+        <ul class="unique-list">
+            <li>Vibrant, child-friendly campus with safe indoor & outdoor play spaces</li>
+            <li>Holistic curriculum blending academics, arts, and life skills</li>
+            <li>Personal attention in small class sizes</li>
+            <li>Highly qualified, loving teachers & staff</li>
+            <li>Modern, well-equipped classrooms and activity zones</li>
+            <li>Celebration of festivals, culture, and values</li>
+            <li>Focus on emotional well-being and social skills</li>
+            <li>Regular parent-teacher interactions & workshops</li>
+            <li>Creative learning corners and hands-on experiences</li>
+            <li>Fresh, healthy snacks for little learners</li>
+        </ul>
     </section>
 
     <!-- Footer -->

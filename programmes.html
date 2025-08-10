@@ -6,12 +6,45 @@
     <title>Our Programmes - Little Flower Preschool</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .programmes-section {
+            max-width: 900px;
+            margin: auto;
+            padding: 32px 20px;
+        }
+        .prog-title {
+            color: #ff3e7d;
+            margin-bottom: 16px;
+            text-align: center;
+            font-size: 2em;
+        }
+        .programme-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .programme-list li {
+            background: #fff3f7;
+            border-radius: 10px;
+            margin: 12px 0;
+            padding: 18px 24px;
+            font-size: 1.12rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            box-shadow: 0 1px 5px rgba(255, 62, 125, 0.07);
+        }
+        .programme-list li strong {
+            color: #ff3e7d;
+            margin-bottom: 2px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo-container">
-            <a href="index.html"><img src="LOGO_page-0001" alt="Little Flower Preschool Logo" class="logo"></a>
+            <a href="index.html"><img src="LOGO_page-0001.jpg" alt="Little Flower Preschool Logo" class="logo"></a>
         </div>
         <nav>
             <ul>
@@ -29,49 +62,32 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <!-- Page Header -->
     <section class="page-header">
         <h1>Our Programmes</h1>
-        <p>Tailored learning experiences for every age group</p>
+        <p>Designed for every stage of your child’s early years</p>
     </section>
 
-    <section class="programmes">
-        <div class="programme-card">
-            <img src="playgroup.jpg" alt="Playgroup">
-            <h2>Playgroup (2-3 years)</h2>
-            <p>A fun, safe space for toddlers to explore, play, and start building social skills. Focus on sensory play, language exposure, and motor skills.</p>
-        </div>
-        <div class="programme-card">
-            <img src="nursery.jpg" alt="Nursery">
-            <h2>Nursery (3-4 years)</h2>
-            <p>Structured learning through play with a focus on early literacy, numeracy, and creative expression. Encouraging independence and curiosity.</p>
-        </div>
-        <div class="programme-card">
-            <img src="kg.jpg" alt="Kindergarten">
-            <h2>Kindergarten (4-5 years)</h2>
-            <p>Preparation for formal schooling with balanced academics, creative activities, and social-emotional learning based on CBSE pattern.</p>
-        </div>
-    </section>
-
-    <section class="special-activities">
-        <h2>Special Activities</h2>
-        <div class="activities-grid">
-            <div class="activity-card">
-                <img src="art.jpg" alt="Art">
-                <h3>Art & Craft</h3>
-                <p>Boosting creativity with painting, clay modeling, and craft projects.</p>
-            </div>
-            <div class="activity-card">
-                <img src="music.jpg" alt="Music">
-                <h3>Music & Dance</h3>
-                <p>Developing rhythm, coordination, and self-expression through music and movement.</p>
-            </div>
-            <div class="activity-card">
-                <img src="outdoor.jpg" alt="Outdoor Play">
-                <h3>Outdoor Play</h3>
-                <p>Promoting physical health, teamwork, and fun in our safe outdoor environment.</p>
-            </div>
-        </div>
+    <section class="programmes-section">
+        <h2 class="prog-title">Programmes Offered</h2>
+        <ul class="programme-list">
+            <li>
+                <strong>Playgroup (1.5 – 2.5 years)</strong>
+                <span>First steps into group learning with music, movement, and sensory activities.</span>
+            </li>
+            <li>
+                <strong>Nursery (2.5 – 3.5 years)</strong>
+                <span>Early literacy, numeracy, art and outdoor play to build confidence and skills.</span>
+            </li>
+            <li>
+                <strong>Junior KG (3.5 – 4.5 years)</strong>
+                <span>Exploring language, numbers, science, stories, and teamwork.</span>
+            </li>
+            <li>
+                <strong>Senior KG (4.5 – 5.5 years)</strong>
+                <span>Ready for primary school with reading, writing, math, and real-world projects.</span>
+            </li>
+        </ul>
     </section>
 
     <!-- Footer -->

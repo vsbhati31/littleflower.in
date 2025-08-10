@@ -7,36 +7,36 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
     <style>
-        .resources-section {
+        .parents-section {
             max-width: 900px;
             margin: auto;
-            padding: 20px;
+            padding: 32px 20px;
         }
-        .resource-card {
-            background: #fff8fb;
-            border: 1px solid #ffd3e1;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .resource-card h3 {
+        .tip-list {
+            list-style: none;
+            padding: 0;
             margin: 0;
+        }
+        .tip-list li {
+            background: #fff3f7;
+            border-radius: 10px;
+            margin: 12px 0;
+            padding: 18px 24px;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 1px 5px rgba(255, 62, 125, 0.07);
+        }
+        .tip-list li::before {
+            content: "💡";
+            font-size: 1.2em;
+        }
+        .parents-title {
             color: #ff3e7d;
-        }
-        .download-btn {
-            background: #00aeef;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-        .download-btn:hover {
-            background: #008ec2;
+            margin-bottom: 16px;
+            text-align: center;
+            font-size: 2em;
         }
     </style>
 </head>
@@ -44,7 +44,7 @@
     <!-- Header -->
     <header>
         <div class="logo-container">
-            <a href="index.html"><img src="logo.jpg" alt="Little Flower Preschool Logo" class="logo"></a>
+            <a href="index.html"><img src="LOGO_page-0001.jpg" alt="Little Flower Preschool Logo" class="logo"></a>
         </div>
         <nav>
             <ul>
@@ -65,23 +65,21 @@
     <!-- Page Header -->
     <section class="page-header">
         <h1>Parent's Corner</h1>
-        <p>Resources and updates for our valued parents</p>
+        <p>Resources, tips, and support for our wonderful families</p>
     </section>
 
-    <!-- Resources -->
-    <section class="resources-section">
-        <div class="resource-card">
-            <h3>Monthly Newsletter - February 2025</h3>
-            <a href="newsletter-feb-2025.pdf" class="download-btn" download>📄 Download</a>
-        </div>
-        <div class="resource-card">
-            <h3>Monthly Newsletter - January 2025</h3>
-            <a href="newsletter-jan-2025.pdf" class="download-btn" download>📄 Download</a>
-        </div>
-        <div class="resource-card">
-            <h3>School Circular - Sports Day 2025</h3>
-            <a href="sports-day-circular.pdf" class="download-btn" download>📄 Download</a>
-        </div>
+    <section class="parents-section">
+        <h2 class="parents-title">Tips for Preschool Parents</h2>
+        <ul class="tip-list">
+            <li>Encourage your child to ask questions, make choices, and express feelings.</li>
+            <li>Read together daily — stories spark imagination and grow language skills.</li>
+            <li>Celebrate small achievements and offer positive reinforcement.</li>
+            <li>Maintain routines for meals, sleep, and play for a sense of security.</li>
+            <li>Stay in touch with teachers for regular updates and feedback.</li>
+            <li>Involve your child in simple chores to build responsibility.</li>
+            <li>Limit screen time and encourage outdoor play.</li>
+            <li>Attend school events and join the Little Flower community spirit!</li>
+        </ul>
     </section>
 
     <!-- Footer -->
