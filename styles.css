@@ -1,215 +1,70 @@
-/* ------------------------------
-   GLOBAL STYLES
------------------------------- */
-body {
-    font-family: 'Baloo 2', cursive;
-    margin: 0;
-    background-color: #fffdfd;
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Little Flower Preschool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/LOGO_page-0001.jpg" alt="Little Flower Preschool Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="programmes.html">Our Programmes</a></li>
+                <li><a href="unique.html">Unique Features</a></li>
+                <li><a href="founders.html">Meet the Founders</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="parents.html">Parent's Corner</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-h1, h2, h3 {
-    font-weight: 800;
-}
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>About Us</h1>
+        <p>Where every child blossoms with love, learning, and laughter.</p>
+    </section>
 
-p {
-    font-size: 1.1rem;
-    color: #444;
-}
+    <!-- Main Content -->
+    <section class="about-section">
+        <div class="content">
+            <h2>Welcome to Little Flower Preschool</h2>
+            <p>Little Flower Preschool is more than just a school; it’s a safe and joyful space where curiosity is nurtured, creativity is celebrated, and children grow into confident learners. Located in Silvassa, we are dedicated to providing a warm, stimulating, and caring environment where each child feels valued and supported.</p>
+            <p>Our experienced educators understand that every child is unique, with their own pace of learning and individual strengths. Through a balanced mix of play, structured activities, and real-world exploration, we ensure that our students develop academically, socially, and emotionally.</p>
+        </div>
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+        <div class="content">
+            <h2>Our Mission</h2>
+            <p>Our mission is to provide high-quality early childhood education that fosters a lifelong love for learning. We believe that children learn best when they are actively engaged, feel safe, and are surrounded by positivity and encouragement.</p>
+        </div>
 
-/* ------------------------------
-   HEADER & NAVIGATION
------------------------------- */
-header {
-    background: linear-gradient(135deg, #ff3e7d, #ff6899);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+        <div class="content">
+            <h2>Core Values</h2>
+            <ul>
+                <li>Respect and kindness for all</li>
+                <li>Hands-on, experiential learning</li>
+                <li>Partnership with parents and community</li>
+                <li>Encouraging creativity and self-expression</li>
+                <li>Commitment to safety and well-being</li>
+            </ul>
+        </div>
+    </section>
 
-.logo img {
-    max-width: 160px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-    .logo img {
-        max-width: 120px;
-    }
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* ------------------------------
-   HERO SECTION
------------------------------- */
-.page-header {
-    padding: 60px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #ffd3e1, #fff3f7);
-    color: #333;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.page-header h1 {
-    margin-bottom: 15px;
-    font-size: 2.8rem;
-    color: #ff3e7d;
-}
-
-.page-header p {
-    font-size: 1.3rem;
-    max-width: 700px;
-    margin: 0 auto;
-    font-weight: 500;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ------------------------------
-   CONTENT STYLING
------------------------------- */
-section {
-    padding: 30px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-h2 {
-    color: #ff3e7d;
-    margin-top: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Lists with flower icons */
-.values-list,
-ul.flower-list {
-    background: #fff3f7;
-    padding: 20px;
-    border-radius: 12px;
-    list-style: none;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-}
-
-.values-list li,
-ul.flower-list li {
-    margin-bottom: 12px;
-    padding-left: 35px;
-    position: relative;
-    font-weight: 500;
-}
-
-.values-list li::before,
-ul.flower-list li::before {
-    content: "🌸";
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
-}
-
-/* ------------------------------
-   BUTTONS
------------------------------- */
-.btn {
-    background: linear-gradient(135deg, #ff3e7d, #ff6899);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(255, 62, 125, 0.3);
-}
-
-.btn:hover {
-    background: linear-gradient(135deg, #ff6899, #ff3e7d);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(255, 62, 125, 0.4);
-}
-
-/* ------------------------------
-   GALLERY
------------------------------- */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.gallery img {
-    border-radius: 12px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* ------------------------------
-   FOOTER
------------------------------- */
-footer {
-    background: linear-gradient(135deg, #ff3e7d, #ff6899);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.95rem;
-}
-
-/* ------------------------------
-   RESPONSIVE LAYOUT
------------------------------- */
-@media (max-width: 768px) {
-    nav ul {
-        justify-content: center;
-    }
-    .page-header h1 {
-        font-size: 2rem;
-    }
-    .page-header p {
-        font-size: 1.1rem;
-    }
-}
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Little Flower Preschool, Silvassa | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
