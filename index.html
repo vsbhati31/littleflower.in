@@ -5,14 +5,252 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Little Flower Preschool - Home</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Google Fonts for fallback -->
+  <!-- Google Fonts for vibrant, modern look -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fff6fd 0%, #e3f0ff 100%);
+      color: #30253a;
+      font-family: 'Quicksand', 'Baloo 2', sans-serif;
+      margin: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #a46cff 50%, #ff3e7d 100%);
+      box-shadow: 0 2px 8px rgba(164,108,255,0.06);
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .header-image-container {
+      border-bottom: 5px solid #ff3e7d;
+    }
+    .header-img {
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 8px 32px rgba(255,62,125,0.07);
+      transition: box-shadow .3s;
+    }
+    .header-img:hover {
+      box-shadow: 0 12px 48px rgba(255,62,125,0.17);
+    }
+    .logo-container {
+      position: absolute;
+      top: 22px;
+      left: 32px;
+      z-index: 2;
+    }
+    .logo {
+      width: 100px;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 2px 8px #a46cff30;
+      padding: 6px;
+      transition: transform .2s;
+    }
+    .logo:hover {
+      transform: scale(1.07) rotate(-4deg);
+    }
+    nav {
+      margin-top: 20px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    nav ul li {
+      display: inline-block;
+    }
+    nav ul li a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.08em;
+      padding: 10px 18px;
+      margin: 2px 6px;
+      border-radius: 20px;
+      text-decoration: none;
+      background: linear-gradient(90deg, #ff3e7d 40%, #a46cff 100%);
+      transition: background .3s, color .2s, box-shadow .3s;
+      box-shadow: 0 2px 6px #ff3e7d18;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+      background: linear-gradient(90deg, #fff 10%, #a46cff 80%);
+      color: #ff3e7d;
+      box-shadow: 0 4px 18px #a46cff26;
+    }
+    .page-header h1 {
+      font-family: 'Baloo 2', cursive;
+      color: #ff3e7d;
+      font-size: 2.8em;
+      margin-bottom: 0.2em;
+      text-shadow: 0 2px 12px #ff3e7d22;
+      letter-spacing: 2px;
+    }
+    .page-header {
+      text-align: center;
+      padding: 34px 0 18px 0;
+      background: linear-gradient(90deg,#fff1f6 50%,#e3e5ff 100%);
+      border-radius: 0 0 42px 42px;
+      margin-bottom: 16px;
+    }
+    .home-intro h2 {
+      font-family: 'Baloo 2', cursive;
+      color: #a46cff;
+      font-size: 2em;
+      margin-bottom: 0.3em;
+      text-shadow: 0 2px 10px #a46cff19;
+    }
+    .home-intro p {
+      color: #3e2a53;
+      font-size: 1.16em;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+    .quick-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 38px;
+    }
+    .highlight-card {
+      background: linear-gradient(135deg, #fff 70%, #f6eaff 100%);
+      border-radius: 20px;
+      box-shadow: 0 2px 12px #ff3e7d1a;
+      padding: 22px 32px;
+      max-width: 230px;
+      min-width: 180px;
+      text-align: center;
+      transition: box-shadow .23s, transform .21s;
+    }
+    .highlight-card:hover {
+      box-shadow: 0 8px 28px #ff3e7d2a;
+      transform: translateY(-6px) scale(1.03);
+    }
+    .highlight-card h3 {
+      color: #ff3e7d;
+      font-size: 1.2em;
+      margin-bottom: 0.3em;
+    }
+    .highlight-card p {
+      color: #6c3eb3;
+      font-size: 1em;
+    }
+    .cta {
+      background: linear-gradient(90deg, #fff 60%, #ffedfb 100%);
+      border-radius: 18px;
+      box-shadow: 0 2px 12px #a46cff1a;
+      margin: 0 auto 40px auto;
+      max-width: 650px;
+      padding: 28px 28px 18px 28px;
+      text-align: center;
+    }
+    .cta h2 {
+      color: #a46cff;
+      font-size: 1.6em;
+      margin-bottom: .3em;
+      font-family: 'Baloo 2', cursive;
+    }
+    .cta .btn, .mini-gallery .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff3e7d 45%, #a46cff 100%);
+      color: #fff;
+      border: none;
+      border-radius: 22px;
+      padding: 10px 28px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.08em;
+      box-shadow: 0 3px 12px #a46cff18;
+      transition: background .3s, color .2s, box-shadow .3s, transform .15s;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    .cta .btn:hover, .mini-gallery .btn:hover {
+      background: linear-gradient(90deg, #a46cff 40%, #ff3e7d 100%);
+      color: #fff;
+      box-shadow: 0 6px 22px #ff3e7d26;
+      transform: scale(1.05);
+    }
+    .mini-gallery {
+      max-width: 960px;
+      margin: 0 auto 30px auto;
+      background: linear-gradient(90deg,#fff 60%,#f3eaff 100%);
+      border-radius: 22px;
+      box-shadow: 0 2px 10px #a46cff1a;
+      padding: 24px 0 18px 0;
+    }
+    .mini-gallery h2 {
+      color: #ff3e7d;
+      font-size: 1.3em;
+      margin-bottom: 0.7em;
+      font-family: 'Baloo 2', cursive;
+      letter-spacing: 1px;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #a46cff1a;
+      border: 3px solid #fff;
+      transition: box-shadow .18s, transform .14s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      box-shadow: 0 8px 26px #a46cff2a;
+      transform: scale(1.04) rotate(-2deg);
+      border: 3px solid #ff3e7d;
+    }
+    .text-center { text-align: center; }
+    footer {
+      background: #a46cff;
+      color: #fff;
+      text-align: center;
+      padding: 18px 0 10px 0;
+      font-size: 1em;
+      margin-top: 28px;
+      border-radius: 24px 24px 0 0;
+      box-shadow: 0 -3px 14px #a46cff19;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color .2s;
+    }
+    footer a:hover {
+      color: #ff3e7d;
+    }
+    @media (max-width: 700px) {
+      .logo-container { position: static; text-align: center; margin: 12px 0 0 0; }
+      .logo { width: 80px; }
+      nav ul { flex-direction: column; gap: 6px; }
+      .quick-highlights { gap: 12px; }
+      .highlight-card { max-width: 99vw; min-width: 120px; padding: 14px 8px;}
+      .gallery { gap: 8px;}
+      .gallery img { width: 98px; height: 70px;}
+    }
+  </style>
 </head>
 <body>
   <!-- Header and Navigation -->
   <header>
     <div class="header-image-container">
-      <img src="header.jpg" alt="Little Flower Preschool Header" class="header-img" style="width:100%;max-height:220px;object-fit:cover;display:block;">
+      <a href="index.html">
+        <!-- Changed header image src and alt as requested -->
+        <img src="Header.jpg" alt="Little Flower Preschool Header" class="header-img" style="width:100%;max-height:220px;object-fit:cover;display:block;">
+      </a>
     </div>
     <div class="logo-container">
       <a href="index.html">
@@ -55,7 +293,7 @@
   </section>
 
   <!-- Quick Highlights Section -->
-  <section class="quick-highlights" style="display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:38px;">
+  <section class="quick-highlights">
     <div class="highlight-card">
       <h3>CBSE Pattern India</h3>
       <p>CBSE curriculum foundation, blended with global methods of learning for holistic development.</p>
@@ -75,19 +313,20 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="cta" style="margin:0 auto 40px auto;max-width:650px;">
+  <section class="cta">
     <h2 style="color:#a46cff;">Ready to See Your Little One Blossom?</h2>
     <p>Schedule a visit or <a class="btn" href="admissions.html">Apply for Admission</a> today!<br>
     Discover why families choose Little Flower Preschool to begin their child's learning adventure.</p>
   </section>
 
   <!-- Mini Gallery Preview -->
-  <section class="mini-gallery" style="max-width:960px;margin:0 auto 30px auto;">
+  <section class="mini-gallery">
     <h2 class="text-center" style="color:#ff3e7d;">Joyful Moments at Little Flower</h2>
     <div class="gallery" style="justify-content:center;">
-      <img src="hero1.jpg" alt="Children painting" style="width:180px;">
-      <img src="hero2.jpg" alt="Story time" style="width:180px;">
-      <img src="hero3.jpg" alt="Outdoor play" style="width:180px;">
+      <!-- hero1.jifi is now a clickable link to home page -->
+      <a href="index.html"><img src="hero1.jifi" alt="Children painting"></a>
+      <img src="hero2.jpg" alt="Story time">
+      <img src="hero3.jpg" alt="Outdoor play">
     </div>
     <div style="text-align:center;margin-top:10px;">
       <a class="btn" href="gallery.html" style="padding:8px 26px;font-size:1em;">View More</a>
