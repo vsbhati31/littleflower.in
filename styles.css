@@ -1,9 +1,9 @@
-/* styles.css - Little Flower Preschool (No unwanted left margin, balanced navigation, adorable and professional) */
+/* styles.css - Little Flower Preschool (Professional, Balanced Left Alignment, No Hard Left Edge) */
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Quicksand:wght@400;600&display=swap');
 
-/* CSS Reset and Box Model */
+/* Reset and Box Model */
 * {
   margin: 0;
   padding: 0;
@@ -29,14 +29,12 @@ header {
   padding-bottom: 0;
   margin-bottom: 0;
 }
-
 .logo-container {
   display: flex;
   align-items: center;
-  padding: 13px 0 8px 0; /* Removed left padding for no unwanted margin */
-  margin-left: 24px; /* Give a little breathing space from the left edge */
+  padding: 13px 0 8px 0;
+  margin-left: 24px;
 }
-
 .logo {
   height: 56px;
   width: auto;
@@ -53,22 +51,19 @@ nav {
   margin: 0;
   padding: 0;
 }
-
 nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   gap: 0;
-  justify-content: flex-start; /* Align all tab links to the left */
+  justify-content: flex-start; /* Left align */
   background: none;
-  padding: 0 0 0 24px; /* Balanced left padding for tabs */
+  padding: 0 0 0 24px;
 }
-
 nav ul li {
   margin: 0;
   padding: 0;
 }
-
 nav ul li a {
   display: block;
   padding: 16px 18px 12px 18px;
@@ -113,17 +108,25 @@ nav ul li a:hover {
   color: #6d4b63;
 }
 
-/* MAIN CONTENT SECTIONS */
-section {
-  margin-bottom: 30px;
-}
-
-.about-section, .content, .unique-section, .founders-section, .parents-section, .admissions-section, .programmes-section {
+/* MAIN CONTENT SECTIONS (BALANCED LEFT/RIGHT PADDING) */
+section,
+.about-section,
+.content,
+.unique-section,
+.founders-section,
+.parents-section,
+.admissions-section,
+.programmes-section {
   max-width: 960px;
-  margin: 0 auto;
-  padding: 0 24px;
+  margin: 0 auto 30px auto;
+  padding: 0 32px;
+  /* This padding prevents text from hugging the hard left edge */
 }
-.about-section .content, .unique-section, .parents-section, .admissions-section, .programmes-section {
+.about-section .content,
+.unique-section,
+.parents-section,
+.admissions-section,
+.programmes-section {
   margin-bottom: 22px;
 }
 .about-section h2,
@@ -158,16 +161,12 @@ li {
 .tip-list li::before { content: "💡"; }
 .steps-list li::before { content: "📝"; }
 
-/* CARDS AND GALLERY */
-.contact-card, .event-card, .founder-card, .gallery-grid img, .gallery img {
-  border-radius: 14px;
-  box-shadow: 0 2px 8px #ff3e7d17;
-}
+/* GALLERY */
 .gallery, .gallery-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
-  justify-content: flex-start; /* Align gallery items to left */
+  justify-content: flex-start;
   margin-top: 14px;
   padding-left: 24px;
 }
@@ -178,6 +177,8 @@ li {
   margin-bottom: 7px;
   background: #ffe6f1;
   border: 3px solid #ffe6f1;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #ff3e7d17;
   transition: transform 0.18s, box-shadow 0.18s;
 }
 .gallery img:hover, .gallery-grid img:hover {
@@ -234,7 +235,14 @@ footer {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1000px) {
-  .about-section, .content, .unique-section, .founders-section, .parents-section, .admissions-section, .programmes-section {
+  section,
+  .about-section,
+  .content,
+  .unique-section,
+  .founders-section,
+  .parents-section,
+  .admissions-section,
+  .programmes-section {
     max-width: 98vw;
     padding: 0 3vw;
   }
@@ -245,10 +253,9 @@ footer {
     max-height: 200px;
   }
 }
-
 @media (max-width: 700px) {
   .logo-container {
-    margin-left: 9px; /* Smaller left margin on mobile */
+    margin-left: 9px;
   }
   nav ul {
     flex-direction: column;
@@ -261,6 +268,16 @@ footer {
     font-size: 1em;
     border-radius: 0;
     border-bottom: 1px solid #ffe6f1;
+  }
+  section,
+  .about-section,
+  .content,
+  .unique-section,
+  .founders-section,
+  .parents-section,
+  .admissions-section,
+  .programmes-section {
+    padding: 0 10px;
   }
   .gallery img, .gallery-grid img {
     width: 92vw;
