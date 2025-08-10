@@ -6,6 +6,49 @@
   <title>Meet the Founders - Little Flower Preschool</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Ensure equal space for all founders */
+    .founders-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 36px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    .founder-card {
+      flex: 1 1 340px;
+      min-width: 260px;
+      max-width: 370px;
+      background: linear-gradient(100deg,#ffe6f1 60%,#e1e6ff 100%);
+      padding: 18px 22px;
+      border-radius: 18px;
+      box-shadow: 0 2px 10px #ff3e7d10;
+      margin: 0 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow .19s, transform .16s;
+    }
+    .founder-card:nth-child(even) {
+      background: linear-gradient(100deg,#e1e6ff 70%,#ffe6f1 100%);
+    }
+    .founder-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    @media (max-width: 900px) {
+      .founders-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+      .founder-card {
+        max-width: 99vw;
+        min-width: 180px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -37,91 +80,85 @@
     </p>
   </section>
 
-  <section class="founders-section" style="max-width:1080px; margin:0 auto;">
+  <section class="founders-section" style="max-width:1280px; margin:0 auto;">
     <div class="content" style="text-align:center; margin-bottom:32px;">
       <h2 style="color:#a46cff;">Our Founding Team</h2>
       <p>
         Little Flower Preschool is the vision and heartfelt creation of four dedicated educators and leaders. Each founder brings unique strengths, boundless care, and a shared dream: to build a preschool where children blossom in a world of joy, safety, and discovery.
       </p>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:36px;justify-content:center;">
-      <!-- Left Side: Khushboo and Sonali -->
-      <div style="flex:1 1 300px; display:flex; flex-direction:column; gap:30px;">
-        <!-- Khushboo Hisaria -->
-        <div class="founder-card" style="background:linear-gradient(100deg,#ffe6f1 60%,#e1e6ff 100%);padding:18px 22px;">
-          <div style="display:flex;align-items:center;gap:16px;">
-            <span style="font-size:2.3em;margin-right:12px;">🌸</span>
-            <div>
-              <h3 style="margin-bottom:4px;color:#ff3e7d;">Khushboo Hisaria</h3>
-              <p style="font-size:1em;color:#6d4b63;">
-                <strong>Visionary Leader & School Head</strong><br>
-                Khushboo’s unwavering dedication and innovative approach have shaped Little Flower into a thriving, nurturing community. With a keen eye for quality and a heart for children, she leads with inspiration, empathy, and excellence.
-              </p>
-              <ul style="margin-top:10px;">
-                <li>Expert in early childhood education and holistic development</li>
-                <li>Guides the school’s academic & cultural vision</li>
-                <li>Known for effective school management & teacher mentorship</li>
-              </ul>
-            </div>
+    <div class="founders-grid">
+      <!-- Khushboo Hisaria -->
+      <div class="founder-card">
+        <div class="founder-header">
+          <span style="font-size:2.3em;margin-right:12px;">🌸</span>
+          <div>
+            <h3 style="margin-bottom:4px;color:#ff3e7d;">Khushboo Hisaria</h3>
+            <p style="font-size:1em;color:#6d4b63;">
+              <strong>Compassionate Child Advocate</strong><br>
+              Khushboo’s warmth and patience create a loving, supportive environment where every child feels valued and understood.
+            </p>
           </div>
         </div>
-        <!-- Sonali Deshmukh -->
-        <div class="founder-card" style="background:linear-gradient(100deg,#e1e6ff 70%,#ffe6f1 100%);padding:18px 22px;">
-          <div style="display:flex;align-items:center;gap:16px;">
-            <span style="font-size:2.3em;margin-right:12px;">🌼</span>
-            <div>
-              <h3 style="margin-bottom:4px;color:#a46cff;">Sonali Deshmukh</h3>
-              <p style="font-size:1em;color:#6d4b63;">
-                <strong>Creative Curriculum Architect</strong><br>
-                Sonali brings fresh ideas and boundless creativity to the classroom, designing learning experiences that spark curiosity and joy in every child.
-              </p>
-              <ul style="margin-top:10px;">
-                <li>Imaginative lesson planning & activity design</li>
-                <li>Encourages children’s self-expression & confidence</li>
-                <li>Instrumental in building a playful school culture</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <ul style="margin-top:10px;">
+          <li>Expert in child psychology and inclusive education</li>
+          <li>Supports emotional & social development</li>
+          <li>Champion for each child’s individual needs</li>
+        </ul>
       </div>
-      <!-- Right Side: Deepika and Devika -->
-      <div style="flex:1 1 300px; display:flex; flex-direction:column; gap:30px;">
-        <!-- Deepika Rathore -->
-        <div class="founder-card" style="background:linear-gradient(100deg,#ffe6f1 60%,#e1e6ff 100%);padding:18px 22px;">
-          <div style="display:flex;align-items:center;gap:16px;">
-            <span style="font-size:2.3em;margin-right:12px;">🌷</span>
-            <div>
-              <h3 style="margin-bottom:4px;color:#ff3e7d;">Deepika Rathore</h3>
-              <p style="font-size:1em;color:#6d4b63;">
-                <strong>Compassionate Child Advocate</strong><br>
-                Deepika’s warmth and patience create a loving, supportive environment where every child feels valued and understood.
-              </p>
-              <ul style="margin-top:10px;">
-                <li>Expert in child psychology and inclusive education</li>
-                <li>Supports emotional & social development</li>
-                <li>Champion for each child’s individual needs</li>
-              </ul>
-            </div>
+      <!-- Sonali Deshmukh -->
+      <div class="founder-card">
+        <div class="founder-header">
+          <span style="font-size:2.3em;margin-right:12px;">🌼</span>
+          <div>
+            <h3 style="margin-bottom:4px;color:#a46cff;">Sonali Deshmukh</h3>
+            <p style="font-size:1em;color:#6d4b63;">
+              <strong>Creative Curriculum Architect</strong><br>
+              Sonali brings fresh ideas and boundless creativity to the classroom, designing learning experiences that spark curiosity and joy in every child.
+            </p>
           </div>
         </div>
-        <!-- Devika Das -->
-        <div class="founder-card" style="background:linear-gradient(100deg,#e1e6ff 70%,#ffe6f1 100%);padding:18px 22px;">
-          <div style="display:flex;align-items:center;gap:16px;">
-            <span style="font-size:2.3em;margin-right:12px;">💮</span>
-            <div>
-              <h3 style="margin-bottom:4px;color:#a46cff;">Devika Das</h3>
-              <p style="font-size:1em;color:#6d4b63;">
-                <strong>Operations & Community Builder</strong><br>
-                Devika’s organization skills and positive energy foster a welcoming, well-run preschool for both children and parents.
-              </p>
-              <ul style="margin-top:10px;">
-                <li>Ensures smooth daily operations</li>
-                <li>Strengthens parent-school partnerships</li>
-                <li>Leads joyful events & celebrations</li>
-              </ul>
-            </div>
+        <ul style="margin-top:10px;">
+          <li>Imaginative lesson planning & activity design</li>
+          <li>Encourages children’s self-expression & confidence</li>
+          <li>Instrumental in building a playful school culture</li>
+        </ul>
+      </div>
+      <!-- Deepika Rathore -->
+      <div class="founder-card">
+        <div class="founder-header">
+          <span style="font-size:2.3em;margin-right:12px;">🌷</span>
+          <div>
+            <h3 style="margin-bottom:4px;color:#ff3e7d;">Deepika Rathore</h3>
+            <p style="font-size:1em;color:#6d4b63;">
+              <strong>Visionary Leader & Quality Mentor</strong><br>
+              Deepika’s unwavering dedication and innovative approach have shaped Little Flower into a thriving, nurturing community. With a keen eye for quality and a heart for children, she inspires excellence, empathy, and growth throughout the school.
+            </p>
           </div>
         </div>
+        <ul style="margin-top:10px;">
+          <li>Expert in early childhood education and holistic development</li>
+          <li>Guides the school’s academic & cultural vision</li>
+          <li>Known for effective school management & teacher mentorship</li>
+        </ul>
+      </div>
+      <!-- Devika Das -->
+      <div class="founder-card">
+        <div class="founder-header">
+          <span style="font-size:2.3em;margin-right:12px;">💮</span>
+          <div>
+            <h3 style="margin-bottom:4px;color:#a46cff;">Devika Das</h3>
+            <p style="font-size:1em;color:#6d4b63;">
+              <strong>Operations & Community Builder</strong><br>
+              Devika’s organization skills and positive energy foster a welcoming, well-run preschool for both children and parents.
+            </p>
+          </div>
+        </div>
+        <ul style="margin-top:10px;">
+          <li>Ensures smooth daily operations</li>
+          <li>Strengthens parent-school partnerships</li>
+          <li>Leads joyful events & celebrations</li>
+        </ul>
       </div>
     </div>
     <!-- Vision & Struggle -->
@@ -131,7 +168,7 @@
         United by a belief in the transformative power of early childhood education, our four founders embarked on a journey to establish Little Flower Preschool. The path was not always easy—facing initial challenges of resources, space, and gaining trust in the community. Their resilience, teamwork, and commitment to quality have made Little Flower a beacon of hope and joy for families in Silvassa.
       </p>
       <p style="max-width:900px;margin:0 auto 24px auto;font-size:1.12em;">
-        Through every struggle and milestone, Khushboo Hisaria’s leadership has been a guiding force. Her vision and drive have helped Little Flower grow and flourish, while the collective dedication and unique strengths of Sonali, Deepika, and Devika have made the school a true home for children and parents alike. Together, they continue to inspire, support, and uplift every member of the Little Flower family.
+        Through every struggle and milestone, the founders’ vision and drive have helped Little Flower grow and flourish. The collective dedication and unique strengths of Khushboo, Sonali, Deepika, and Devika have made the school a true home for children and parents alike. Together, they continue to inspire, support, and uplift every member of the Little Flower family.
       </p>
     </div>
   </section>
